@@ -1,4 +1,6 @@
-#Thu Aug 13 15:16:59 CST 2015
 eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/permission/allocation.jsp=UTF-8
 encoding//src/resources/config.properties=UTF-8
+encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8

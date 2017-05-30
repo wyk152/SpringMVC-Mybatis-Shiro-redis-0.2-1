@@ -12,7 +12,7 @@
           </button>
 	     </div>
 	     <div role="navigation" class="navbar-collapse collapse">
-	     		<a id="_logo"  href="http://shiro.itboy.net/" style="color:#fff; font-size: 24px;" class="navbar-brand hidden-sm">SSM + Shiro Demo 演示</a>
+	     	<#--	<a id="_logo"  href="http://shiro.itboy.net/" style="color:#fff; font-size: 24px;" class="navbar-brand hidden-sm">SSM + Shiro Demo 演示</a> -->
 	          <ul class="nav navbar-nav" id="topMenu">
 				<li class="dropdown ${(index==1)?string('active','')}">
 					<a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="${basePath}/user/index.shtml">
@@ -62,7 +62,8 @@
 							</@shiro.hasPermission>
 						</ul>
 					</li>	
-				</@shiro.hasAnyRoles>    
+				</@shiro.hasAnyRoles>   
+				<#--  
 				<li>
 					<a class="dropdown-toggle" target="_blank" href="http://www.sojson.com/tag/shiro">
 						Shiro 博客<span class="collapsing"></span>
@@ -72,7 +73,8 @@
 					<a class="dropdown-toggle" href="http://www.sojson.com/shiro">
 						本项目介绍<span class="collapsing"></span>
 					</a>
-				</li>	          
+					
+				</li>	 -->         
 	          </ul>
 	           <ul class="nav navbar-nav  pull-right" >
 				<li class="dropdown ${(index==10)?string('active','')}" style="color:#fff;">
@@ -81,8 +83,8 @@
 							onclick="location.href='${basePath}/user/index.shtml'" href="${basePath}/user/index.shtml" class="dropdown-toggle qqlogin" >
 							${token.nickname?default('阿西吧')}<span class="caret"></span></a>
 							<ul class="dropdown-menu" userid="${token.id}">
-								<li><a href="http://shiro.itboy.net/user/index.shtml">个人资料</a></li>
-								<li><a href="http://shiro.itboy.net/role/mypermission.shtml">我的权限</a></li>
+								<li><a href="/shiro.demo/user/index.shtml">个人资料</a></li>
+								<li><a href="/shiro.demo/role/mypermission.shtml">我的权限</a></li>
 								<li><a href="javascript:void(0);" onclick="logout();">退出登录</a></li>
 							</ul>
 						</@shiro.user>  

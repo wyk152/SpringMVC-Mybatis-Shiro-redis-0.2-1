@@ -17,17 +17,17 @@
           </button>
 	     </div>
 	     <div role="navigation" class="navbar-collapse collapse">
-	     		<a id="_logo"  href="http://shiro.itboy.net/" style="color:#fff; font-size: 24px;" class="navbar-brand hidden-sm">SSM + Shiro Demo 演示</a>
+	     		<!-- <a id="_logo"  href="http://shiro.itboy.net/" style="color:#fff; font-size: 24px;" class="navbar-brand hidden-sm">SSM + Shiro Demo 演示</a> -->
 	          <ul class="nav navbar-nav" id="topMenu">
 				<li class="dropdown ">
 					<a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="/user/index.shtml">
 						个人中心<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="/user/index.shtml">个人资料</a></li>
-						<li><a href="/user/updateSelf.shtml" >资料修改</a></li>
-						<li><a href="/user/updatePswd.shtml" >密码修改</a></li>
-						<li><a href="/role/mypermission.shtml">我的权限</a></li>
+						<li><a href="/shiro.demo/user/index.shtml">个人资料</a></li>
+						<li><a href="/shiro.demo/user/updateSelf.shtml" >资料修改</a></li>
+						<li><a href="/shiro.demo/user/updatePswd.shtml" >密码修改</a></li>
+						<li><a href="/shiro.demo/role/mypermission.shtml">我的权限</a></li>
 					</ul>
 				</li>	  
 				<%--拥有 角色888888（管理员） ||  100002（用户中心）--%>
@@ -38,10 +38,10 @@
 					</a>
 					<ul class="dropdown-menu">
 						<shiro:hasPermission name="/member/list.shtml">
-							<li><a href="/member/list.shtml">用户列表</a></li>
+							<li><a href="/shiro.demo/member/list.shtml">用户列表</a></li>
 						</shiro:hasPermission>
 						<shiro:hasPermission name="/member/online.shtml">
-							<li><a href="/member/online.shtml">在线用户</a></li>
+							<li><a href="/shiro.demo/member/online.shtml">在线用户</a></li>
 						</shiro:hasPermission>
 					</ul>
 				</li>	
@@ -54,16 +54,16 @@
 						</a>
 						<ul class="dropdown-menu">
 							<shiro:hasPermission name="/role/index.shtml">
-								<li><a href="/role/index.shtml">角色列表</a></li>
+								<li><a href="/shiro.demo/role/index.shtml">角色列表</a></li>
 							</shiro:hasPermission>
 							<shiro:hasPermission name="/role/allocation.shtml">
-								<li><a href="/role/allocation.shtml">角色分配</a></li>
+								<li><a href="/shiro.demo/role/allocation.shtml">角色分配</a></li>
 							</shiro:hasPermission>
 							<shiro:hasPermission name="/permission/index.shtml">
-								<li><a href="/permission/index.shtml">权限列表</a></li>
+								<li><a href="/shiro.demo/permission/index.shtml">权限列表</a></li>
 							</shiro:hasPermission>
 							<shiro:hasPermission name="/permission/allocation.shtml">
-								<li><a href="/permission/allocation.shtml">权限分配</a></li>
+								<li><a href="/shiro.demo/permission/allocation.shtml">权限分配</a></li>
 							</shiro:hasPermission>
 						</ul>
 					</li>	
@@ -87,8 +87,8 @@
 						<shiro:principal property="nickname"/>
 						<span class="caret"></span></a>
 						<ul class="dropdown-menu" userid="<shiro:principal property="id"/>">
-							<li><a href="http://shiro.itboy.net/user/index.shtml">个人资料</a></li>
-							<li><a href="http://shiro.itboy.net/role/mypermission.shtml">我的权限</a></li>
+							<li><a href="/shiro.demo/user/index.shtml">个人资料</a></li>
+							<li><a href="/shiro.demo/role/mypermission.shtml">我的权限</a></li>
 							<li><a href="javascript:void(0);" onclick="logout();">退出登录</a></li>
 						</ul>
 					</shiro:user>   
